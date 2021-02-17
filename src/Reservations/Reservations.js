@@ -2,11 +2,21 @@ import React from 'react';
 import './Reservations.css';
 import Card from '../Card/Card';
 
-const Reservations = () => {
+const Reservations = ({reservations}) => {
+    const reservationCards = reservations.map(reservation => {
+        return (
+            <Card
+             key={reservation.id}
+             name={reservation.name}
+             date={reservation.date}
+             time={reservation.time}
+             number={reservation.number}
+            />
+        )
+    })
     return (
         <section className='resy-container'>
-            <h1>Hello</h1>
-            <Card />
+            {reservationCards}
         </section>
     )
 }
