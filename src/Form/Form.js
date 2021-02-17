@@ -12,11 +12,11 @@ class Form extends Component {
     render() {
         return (
             <form className='resy-form'>
-                <input type='text'></input>
-                <input type='text'></input>
-                <input type='text'></input>
-                <input type='text'></input>
-                <button>Make Reservation</button>
+                <input type='text' placeholder='Name'></input>
+                <input type='text' placeholder='Date (mm/dd)'></input>
+                <input type='text' placeholder='Time'></input>
+                <input type='text' placeholder='Number of guests'></input>
+                <button className='form-button'>Make Reservation</button>
             </form>
         )
     }
