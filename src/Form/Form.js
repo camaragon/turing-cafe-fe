@@ -5,7 +5,10 @@ class Form extends Component {
     constructor() {
         super();
         this.state = {
-
+            name: '',
+            date: '',
+            time: '',
+            number: 0
         }
     }
 

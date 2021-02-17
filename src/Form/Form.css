@@ -1,15 +1,9 @@
 .resy-form {
-    /* align-self:center; */
     width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
-
-/* .resy-form * {
-    margin-right: 5%;
-    margin-left: 5%;
-} */
 
 input {
     height: 80%;
