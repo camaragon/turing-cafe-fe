@@ -39,6 +39,7 @@ class Form extends Component {
         return (
             <form className='resy-form'>
                 <input 
+                    className='name-input'
                     type='text' 
                     placeholder='Name' 
                     name='name'
@@ -47,6 +48,7 @@ class Form extends Component {
 
                 </input>
                 <input 
+                    className='date-input'
                     type='text' 
                     placeholder='Date (mm/dd)' 
                     name='date'
@@ -55,6 +57,7 @@ class Form extends Component {
 
                 </input>
                 <input 
+                    className='time-input'
                     type='text' 
                     placeholder='Time' 
                     name='time'
@@ -63,6 +66,7 @@ class Form extends Component {
 
                 </input>
                 <input 
+                    className='number-input'
                     type='text' 
                     placeholder='Number of guests' 
                     name='number'

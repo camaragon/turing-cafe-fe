@@ -1,7 +1,7 @@
 describe('Reservation Display', () => {
     const baseUrl = 'http://localhost:3000/?name=&date=&time=&number=';
 
-    it('should be able to visit the base and see the homepage', () => {
+    it('should be able to visit the base url and see the homepage', () => {
         cy
         .visit(baseUrl)
         .location()
