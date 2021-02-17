@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Reservations from '../Reservations/Reservations';
+import Reservations from '../../Reservations/Reservations';
 import Form from '../Form/Form';
 
 class App extends Component {
@@ -16,7 +16,6 @@ class App extends Component {
     .then(response => response.json())
     .then(data => {
       this.setState({reservations: data})
-      console.log(data);
     })
     .catch(err => {
       console.error(err);

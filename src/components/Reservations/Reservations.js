@@ -6,11 +6,11 @@ const Reservations = ({reservations}) => {
     const reservationCards = reservations.map(reservation => {
         return (
             <Card
-             key={reservation.id}
-             name={reservation.name}
-             date={reservation.date}
-             time={reservation.time}
-             number={reservation.number}
+                key={reservation.id}
+                name={reservation.name}
+                date={reservation.date}
+                time={reservation.time}
+                number={reservation.number}
             />
         )
     })
