@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Reservations from '../../Reservations/Reservations';
+import Reservations from '../Reservations/Reservations'
 import Form from '../Form/Form';
 
 class App extends Component {
@@ -22,8 +22,21 @@ class App extends Component {
     });
   }
 
+  // componentDidUpdate = () => {
+  //   fetch('http://localhost:3001/api/v1/reservations')
+  // }
+
   addReservation = (newResy) => {
-    this.setState({ reservations: [...this.state.reservations, newResy] });
+    fetch('http://localhost:3001/api/v1/reservations', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newResy)
+    })
+    .then(response => response.json())
+    .then(data => this.setState({ reservations: [...this.state.reservations, data] }))
+    .catch(error => console.error(error))
   }
 
   render() {
