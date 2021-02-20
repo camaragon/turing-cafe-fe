@@ -22,10 +22,6 @@ class App extends Component {
     });
   }
 
-  // componentDidUpdate = () => {
-  //   fetch('http://localhost:3001/api/v1/reservations')
-  // }
-
   addReservation = (newResy) => {
     fetch('http://localhost:3001/api/v1/reservations', {
       method: 'POST',
@@ -39,12 +35,25 @@ class App extends Component {
     .catch(error => console.error(error))
   }
 
+  deleteReservation = (id) => {
+    fetch(`http://localhost:3001/api/v1/reservations/${id}`, {
+      method: 'DELETE'
+    })
+    .then(response => response.json())
+    .then(data => {
+      this.setState({ reservations: data })
+    })
+    .catch(err => {
+      console.error(err);
+    });
+  }
+
   render() {
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <Form addReservation={this.addReservation}/>
-        <Reservations reservations={this.state.reservations}/>
+        <Reservations reservations={this.state.reservations} deleteReservation={this.deleteReservation}/>
       </div>
     )
   }
